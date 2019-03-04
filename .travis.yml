@@ -1,0 +1,23 @@
+
+language: python
+
+# https://docs.travis-ci.com/user/languages/python/
+#python:
+#-   "2.7"
+#-   "3.3"
+#-   "3.4"
+
+# https://docs.travis-ci.com/user/multi-os/
+# https://docs.travis-ci.com/user/ci-environment/#Virtualization-environments
+matrix:
+    include:
+        # Ubuntu 14.04
+        -   os: linux
+            dist: trusty
+            sudo: required
+            python: 2.7
+
+script:
+-   set -e
+-   ./pep8.sh
+-   tox
