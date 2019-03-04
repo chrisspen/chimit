@@ -17,6 +17,12 @@ matrix:
             sudo: required
             python: 2.7
 
+install:
+-   sudo add-apt-repository -y ppa:deadsnakes/ppa
+-   sudo apt-get -yq update
+-   sudo apt-get -yq install python3.6 python3.6-dev
+-   pip install -r requirements-test.txt
+
 script:
 -   set -e
 -   ./pep8.sh
