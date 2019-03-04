@@ -35,7 +35,7 @@ setup(
     entry_points=dict(console_scripts=['chimit=chimit.chimit:main', 'chimit-%s=chimit.chimit:main' % sys.version[:3]]),
     author="Chris Spencer",
     author_email="chrisspen@gmail.com",
-    description="Fabric commands for simplifying server deployments",
+    description="A version of `time` that plays a success or error chime based on the return code.",
     long_description=read_md('README.md'),
     long_description_content_type='text/markdown',
     license="MIT",
